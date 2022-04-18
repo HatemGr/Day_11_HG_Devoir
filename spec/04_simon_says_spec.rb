@@ -1,7 +1,6 @@
 require_relative '../lib/04_simon_says'
 
 describe "Simon says" do
-  describe "echo" do
     it "should echo hello" do
       expect(echo("hello")).to eq("hello")
     end
@@ -9,9 +8,9 @@ describe "Simon says" do
     it "should echo bye" do
       expect(echo("bye")).to eq("bye")
     end
-  end
+end
 
-  describe "shout" do
+describe "shout" do
     it "should shout hello" do
       expect(shout("hello")).to eq("HELLO")
     end
@@ -19,9 +18,9 @@ describe "Simon says" do
     it "should shout multiple words" do
       expect(shout("hello world")).to eq("HELLO WORLD")
     end
-  end
+end
 
-  describe "repeat" do
+describe "repeat" do
     it "should repeat" do
       expect(repeat("hello")).to eq("hello hello")
     end
@@ -33,9 +32,9 @@ describe "Simon says" do
     it "should repeat a number of times" do
       expect(repeat("hello", 3)).to eq("hello hello hello")
     end
-  end
+end
 
-  describe "start_of_word" do
+describe "start_of_word" do
     it "returns the first letter" do
       expect(start_of_word("hello", 1)).to eq("h")
     end
@@ -50,9 +49,9 @@ describe "Simon says" do
       expect(start_of_word(s, 2)).to eq("ab")
       expect(start_of_word(s, 3)).to eq("abc")
     end
-  end
+end
 
-  describe "first_word" do
+describe "first_word" do
     it "tells us the first word of 'Hello World' is 'Hello'" do
       expect(first_word("Hello World")).to eq("Hello")
     end
@@ -60,9 +59,9 @@ describe "Simon says" do
     it "tells us the first word of 'oh dear' is 'oh'" do
       expect(first_word("oh dear")).to eq("oh")
     end
-  end
+end
 
-  describe "titleize" do
+describe "titleize" do
     it "capitalizes a word" do
       expect(titleize("jaws")).to eq("Jaws")
     end
@@ -78,6 +77,4 @@ describe "Simon says" do
     it "does capitalize 'little words' at the start of a title" do
       expect(titleize("the bridge over the river kwai")).to eq("The Bridge Over the River Kwai")
     end
-  end
-
 end
